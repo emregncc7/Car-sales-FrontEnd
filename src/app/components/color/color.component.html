@@ -1,0 +1,17 @@
+<div class="container" >
+    <div>
+    <h4 class="text-center text-white bg-success">Renkler</h4>
+    <table class="table">
+        <thead class="table-secondry" class="table-success">
+        <tr>
+            <th>Id</th>
+            <th>ColorName</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let color of colors">
+  
+        <td>{{color.colorId}}</td>
+        <td>{{color.colorName}}</td>
+  
+    </tr>
+  </table>
