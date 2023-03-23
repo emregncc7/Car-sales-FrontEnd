@@ -1,27 +1,41 @@
 <div *ngIf="dataLoaded==false" class="spinner-border text-warning" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-<table *ngIf="dataLoaded==true" class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>BrandName</th>
-            <th>ColorName</th>
-            <th>CarName</th>
-            <th>ModelYear</th>
-            <th>DailyPrice</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tr *ngFor="let car of cars">
+  <span class="visually-hidden">Loading...</span>
+</div>
 
-        <td>{{car.carId}}</td>
-        <td>{{car.brandId}}</td>
-        <td>{{car.colorId}}</td>
-        <td>{{car.carName}}</td>
-        <td>{{car.modelYear}}</td>
-        <td>{{car.dailyPrice}}</td>
-        <td>{{car.description}}</td>
+<h4 class="text-center text-white bg-success">Araclar</h4>
 
+<div class="mb-3">
+  <label for="filterText" class="form-label">Ürün Ara</label>
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Arama ifadesi giriniz.">
+</div>
+
+<div *ngIf="filterText.length> 2" class="alert alert-success">
+  {{filterText}} aradınız
+</div>
+
+<table *ngIf="dataLoaded==true" class="table table-striped table-hover table-bordered">
+  <thead class="table-secondary">
+    <tr>
+      <th class="text-white bg-primary">Id</th>
+      <th class="text-white bg-primary">BrandName</th>
+      <th class="text-white bg-primary">ColorName</th>
+      <th class="text-white bg-primary">CarName</th>
+      <th class="text-white bg-primary">ModelYear</th>
+      <th class="text-white bg-primary">DailyPrice</th>
+      <th class="text-white bg-primary">Description</th>
+      <th class="text-white bg-primary"></th>
     </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars | filterPipe:filterText">
+      <td>{{car.carId}}</td>
+      <td>{{car.brandId}}</td>
+      <td>{{car.colorId}}</td>
+      <td>{{car.carName}}</td>
+      <td>{{car.modelYear}}</td>
+      <td>{{car.dailyPrice |currency:'TRY':'symbol-narrow'}}</td>
+      <td>{{car.description}}</td>
+      <td><button (click)="addToCart(car)" type="button" class="btn btn-primary">Hemen kirala</button></td>
+    </tr>
+  </tbody>
 </table>

@@ -1,17 +1,8 @@
-<div class="container" >
-    <div>
-    <h4 class="text-center text-white bg-success">Renkler</h4>
-    <table class="table">
-        <thead class="table-secondry" class="table-success">
-        <tr>
-            <th>Id</th>
-            <th>ColorName</th>
-        </tr>
-    </thead>
-    <tr *ngFor="let color of colors">
-  
-        <td>{{color.colorId}}</td>
-        <td>{{color.colorName}}</td>
-  
-    </tr>
-  </table>
+<ul class="list-group">
+    <li [class]="getAllColorClass()" routerLink="/cars">Tüm Ürünler</li>
+    <li (click)="setCurrentColor(color)"
+    routerLink = "/cars/colors/{{color.colorId}}"
+    *ngFor="let color of colors"
+      [class]="getCurrentColorClass(color)" >{{color.colorName}}</li>
+  </ul>
+  <h5 *ngIf="currentColor "> {{currentColor.colorName}} seçtiniz.</h5>
