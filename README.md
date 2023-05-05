@@ -1,27 +1,10 @@
-# RentACarFrontEnd
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Home Page
+![img1](https://user-images.githubusercontent.com/121591714/236366222-a4a860de-e3da-4361-a0c6-c545b7137ef2.png)
+Register Page
+![ing2](https://user-images.githubusercontent.com/121591714/236366303-2ac3ed2e-bef9-45bb-ac7b-41ee28a9c9e4.png)
+Login Page
+![img3](https://user-images.githubusercontent.com/121591714/236366440-1d72d426-f527-4dbc-a9ff-e506d3fdd1d2.png)
+Search
+![img4](https://user-images.githubusercontent.com/121591714/236366518-ee02c734-68db-42e8-8c9f-f247327c878f.png)
+Cart
+![CART](https://user-images.githubusercontent.com/121591714/236366608-607d36c1-54d9-407a-a3c5-411fdb699bbe.png)
