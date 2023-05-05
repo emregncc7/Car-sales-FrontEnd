@@ -39,13 +39,14 @@ import { RegisterComponent } from './components/register/register.component';
     RegisterComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
+   
     FormsModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    
+    HttpClientModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     })
