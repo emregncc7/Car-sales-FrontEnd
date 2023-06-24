@@ -1,0 +1,50 @@
+.navbar .navbar-brand{
+    color: #E50914 ;
+    font-weight: bold;
+}
+
+.navbar .nav-link{
+    color: #ffffff ;
+    font-weight: bold;
+}
+
+/* Navbar linkleri */
+.navbar-nav .nav-link {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  /* Navbar markası */
+  .navbar-brand {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  /* Navbar toogler icon */
+  .navbar-toggler-icon {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Sepet özeti butonu */
+  .cart-summary-button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border-color: #333;
+  }
+  
+  /* Sepet özeti badge */
+  .cart-summary-badge {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+  }
+  
+  

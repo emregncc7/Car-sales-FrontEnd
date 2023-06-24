@@ -6,4 +6,8 @@ export interface Car{
     carName:string;
     dailyPrice:number;
     description:string;
+    telephone:string;
+    email:string;
+    instagram:string;
+
 }

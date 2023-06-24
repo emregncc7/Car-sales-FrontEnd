@@ -1,21 +1,37 @@
-
-<div class="container">
+<div class="container" style="background-image: url('https://www.donanimhaber.com/images/images/haber/159687/src_340x1912xelektrikli-araba-fiyatlari-2023.jpg'); background-repeat: no-repeat; background-size:80em 250%; background-position: center ; height: 300px;">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div>
     <app-navi></app-navi>
-    <div class="row">
-      <div class="col-md-2" >
-        
-        <app-color></app-color>
-        <br>
-        <app-brand></app-brand>
-      </div>
-      <div class="col-md-10">
-        <router-outlet></router-outlet>
-        <br>
-        <app-rental></app-rental>
-      </div>
-      
-    </div>
-   
   </div>
   
+  <div *ngIf="router.url === '/login'">
+    <router-outlet></router-outlet>
+  </div>
   
+  <div *ngIf="router.url === '/register'">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <div class="row" *ngIf="router.url !== '/login' && router.url !== '/register'">
+    <div class="col-sm-3">
+      <div style="margin-bottom: 20px;">
+        <app-color></app-color>
+      </div>
+      <div>
+        <app-brand></app-brand>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <router-outlet></router-outlet>
+      <br>
+    </div>
+  </div>
+</div>

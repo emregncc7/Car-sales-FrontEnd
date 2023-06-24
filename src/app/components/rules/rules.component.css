@@ -1,0 +1,19 @@
+.rules-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .rules-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .rules-table td span {
+    font-weight: bold;
+    margin-right: 5px;
+    color: red;
+  }
+  .rules-heading {
+    text-align: center;
+    color: red;
+  }

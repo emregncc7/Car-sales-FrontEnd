@@ -1,0 +1,55 @@
+<div style="display: flex; flex-wrap: wrap;">
+  <div *ngFor="let car of carDetails" class="card mt-2 mr-2" style="width: 70rem; height: 35rem; margin-right: 100px;">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%;">
+        <img [src]="baseUrl + car.imagePath" class="card-img-top" style="object-fit: cover; width: 100%; height: 100%;"/>
+      </div>
+
+      <div class="card-body" style="width: 60%;">
+        <h3 class="card-title">{{ car.brandName }}</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i><b>Model Yılı | </b></i>{{ car.modelYear }}</li>
+          <li class="list-group-item"><i><b>Model | </b></i>{{ car.carName }}</li>
+          <li class="list-group-item"><i><b>Renk | </b></i>{{ car.colorName }}</li>
+          <li class="list-group-item"><i><b>Açıklama | </b></i>{{ car.description }}</li>
+          <li class="list-group-item"><i><b>Fiyat:  </b></i>{{ car.dailyPrice + " ₺" }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card-body" style="display: flex; align-items: center;">
+      <span style="font-weight: bold; font-size: 24px;">İletişim</span>
+    </div>
+    
+
+    <ul class="list-group list-group-flush">
+      
+
+      <li class="list-group-item">
+        <img src="https://www.svgrepo.com/show/513836/mail.svg" alt="Mail Iconu" style="width: 24px; height: 24px;" />
+        <b>E-Mail  | </b>{{ car.email }}
+      </li>
+
+
+      <li class="list-group-item">
+        <img src="https://www.svgrepo.com/show/111201/phone-call.svg" alt="Telefon Iconu" style="width: 24px; height: 24px;" />
+        <b>Telefon | </b>{{ car.telephone }}
+      </li>
+
+      <li class="list-group-item">
+        <img src="https://cdn.iconscout.com/icon/free/png-512/free-instagram-216-721958.png?f=avif&w=256" alt="Instagram Iconu" style="width: 24px; height: 24px;" />
+        <b>İnstagram | </b>{{ car.instagram }}
+      </li>
+      
+
+    </ul>
+
+    <div class="card-body">
+      <div class="row">
+        <button type="button" class="btn btn-success" routerLink="/cars/carDetail/{{car.carId}}">
+          İletişime geç
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

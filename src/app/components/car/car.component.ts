@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Car } from 'src/app/models/car';
+import { CarDetail } from 'src/app/models/carDetail';
+
+import { CarDetailService } from 'src/app/services/car-detail.service';
 import { CarService } from 'src/app/services/car.service';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -12,11 +15,13 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CarComponent implements OnInit {
   cars:Car[] = [];
+  carDetails:CarDetail[] = [];
   dataLoaded = false;
+  baseUrl:string="https://localhost:44308/Uploads/";
   filterText="";
 
   constructor(private carService:CarService,private activatedRoute:ActivatedRoute
-    ,private toastrService:ToastrService,private cartService:CartService){}
+    ,private toastrService:ToastrService,private cartService:CartService, private carDetailService:CarDetailService){}
  
   ngOnInit(): void{
     
@@ -34,12 +39,20 @@ export class CarComponent implements OnInit {
 
   }
 
+  // getCars()
+  // { this.carDetailService.getCarDetails().subscribe(response=>{this.carDetails = response.data,this.dataLoaded = true;})
+  // }
+
   getCars(){ 
     this.carService.getCars().subscribe(response=>{
       this.cars = response.data
       this.dataLoaded = true;
     })
   }
+
+  
+
+
   getCarsByBrand(brandId:number){ 
     this.carService.getCarsByBrand(brandId).subscribe(response=>{
       this.cars = response.data
@@ -54,11 +67,18 @@ export class CarComponent implements OnInit {
   }
   addToCart(car:Car){
     if (car.carId ===1) {
-      this.toastrService.error("satılık değildir!","Chai adamdır")   
+      this.toastrService.error("satılık değildir!", car.carName +" adamdır")   
     }else{
     this.toastrService.success("Sepete eklendi",car.carName)
     this.cartService.addToCart(car);
   }
+  }
+
+  getCarById(carId: number) {
+    this.carService.getCarById(carId).subscribe((response) => {
+      this.cars = response.data;
+      this.dataLoaded = true;
+    });
   }
  
   

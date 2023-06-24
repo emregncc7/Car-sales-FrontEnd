@@ -5,12 +5,12 @@
             <div class="card-body">
                 <form [formGroup]="carAddForm">
                     <div class="mb-3">
-                        <label for="carName">Araç adı</label>
+                        <label for="carName">Model</label>
                         <div class="form-group">
                             <input type="text" 
                             id="carName" 
                             formControlName="carName" class="form-control" 
-                            placeholder="Araç adı"/>
+                            placeholder="örn : c180"/>
                         </div>
                     </div>
                    
@@ -24,21 +24,21 @@
                         </div>
                     </div>
                    <div class="mb-3">
-                    <label for="brandId">brandId</label>
+                    <label for="brandId">Marka kodu</label>
                     <div class="form-group">
                         <input type="number" 
                         id="brandId" 
                         formControlName="brandId" class="form-control" 
-                        placeholder="brandId"/>
+                        placeholder="Bmw : 1, Audi : 2, McLaren : 3, Toyota : 4, Mercedes : 5, Fiat : 6"/>
                     </div>
                    </div>
                     <div  class="mb-3">
-                        <label for="colorId">colorId</label>
+                        <label for="colorId">Renk Kodu</label>
                         <div class="form-group">
                             <input type="number" 
                             id="colorId" 
                             formControlName="colorId" class="form-control" 
-                            placeholder="colorId"/>
+                            placeholder="Siyah : 1, Beyaz : 2, Kırmızı : 3, Turuncu : 4, Lacivert : 5"/>
                         </div>
                     </div>
                     <div  class="mb-3">
@@ -60,12 +60,48 @@
                             placeholder="Açıklama"/>
                         </div>
                     </div>
+
+                    
+
+                    <div  class="mb-3">
+                        <label for="telephone">Telefon Numarası</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="telephone" 
+                            formControlName="telephone" class="form-control" 
+                            placeholder="Phone Number"/>
+                        </div>
+                    </div>
+
+                    <div  class="mb-3">
+                        <label for="email">Mail Adresi</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="email" 
+                            formControlName="email" class="form-control" 
+                            placeholder="Mail Address"/>
+                        </div>
+                    </div>
+
+                    <div  class="mb-3">
+                        <label for="instagram">İnstagram</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="instagram" 
+                            formControlName="instagram" class="form-control" 
+                            placeholder="instagram Address"/>
+                        </div>
+                    </div>
                     
                 </form>
             </div>
             <div class="card-footer">
                 <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+                <button class="btn btn-fill btn-danger" [routerLink]="'/rules'">Kuralları görüntüle</button>
+
+                
             </div>
+           
         </div>
         
     </div>

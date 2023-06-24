@@ -23,6 +23,13 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
 import { CarAddComponent } from './components/car-add/car-add.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ViewdetailComponent } from './components/viewdetail/viewdetail.component';
+import { RulesComponent } from './components/rules/rules.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { CarimageComponent } from './components/carimage/carimage.component';
+import { CardetailComponent } from './components/cardetail/cardetail.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +43,13 @@ import { RegisterComponent } from './components/register/register.component';
     CartSummaryComponent,
     CarAddComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ViewdetailComponent,
+    RulesComponent,
+    LoginPageComponent,
+    CarimageComponent,
+    CardetailComponent,
+
   ],
   imports: [
     
