@@ -1,10 +1,10 @@
 Home Page
-![img1](https://user-images.githubusercontent.com/121591714/236366222-a4a860de-e3da-4361-a0c6-c545b7137ef2.png)
+![1](https://github.com/emregncc7/Car-sales-FrontEnd/assets/121591714/8ef42e3c-940f-4afa-b1c7-72cb70fcafc6)
+Detail Page
+![2](https://github.com/emregncc7/Car-sales-FrontEnd/assets/121591714/eb2a3d31-126e-4704-8c85-11f68332a1db)
 Register Page
-![ing2](https://user-images.githubusercontent.com/121591714/236366303-2ac3ed2e-bef9-45bb-ac7b-41ee28a9c9e4.png)
+![3](https://github.com/emregncc7/Car-sales-FrontEnd/assets/121591714/63ab6632-90dc-454a-8e99-92c14bcaff75)
 Login Page
-![img3](https://user-images.githubusercontent.com/121591714/236366440-1d72d426-f527-4dbc-a9ff-e506d3fdd1d2.png)
-Search
-![img4](https://user-images.githubusercontent.com/121591714/236366518-ee02c734-68db-42e8-8c9f-f247327c878f.png)
-Cart
-![CART](https://user-images.githubusercontent.com/121591714/236366608-607d36c1-54d9-407a-a3c5-411fdb699bbe.png)
+![4](https://github.com/emregncc7/Car-sales-FrontEnd/assets/121591714/5e2fc064-a43d-4c70-b2c7-9b6af7b8a335)
+CarAdd
+![5](https://github.com/emregncc7/Car-sales-FrontEnd/assets/121591714/c80987fa-6f75-4ce5-a5af-747a902de071)
